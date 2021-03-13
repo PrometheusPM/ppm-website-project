@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext, useRef } from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
+import { ThemeProvider } from "styled-components";
+import Header from "./header/Header";
+import Footer from "./footer/Footer";
+import mainComponents from "./main";
+import { mainsKey } from "./data";
+import Context from "./Context";
 
 function App() {
+  const context = useContext(Context);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={context.theme}>
+      <Router>
+        <Header />
+        <Switch>
+          {Object.values(mainsKey()).map((main, i) => {
+            const Component = mainComponents[i];
+            return <Route path={main.path}>{<Component />}</Route>;
+          })}
+          <Route path="/">
+            <Redirect to={mainsKey().home.path} />
+          </Route>
+        </Switch>
+        <Footer />
+      </Router>
+    </ThemeProvider>
   );
 }
-
 export default App;
