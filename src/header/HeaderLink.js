@@ -20,7 +20,7 @@ const Style = styled.div`
     padding: 0 0.25rem 0 0.25rem;
     .text {
       position: relative;
-      font-size: 1.25rem;
+      font-size: ${(props) => props.theme.header.menuLinks.fontSize};
       color: transparent;
       background-image: url("background-images/gold-gradient-text.jpg");
       background-size: 100% 100%;

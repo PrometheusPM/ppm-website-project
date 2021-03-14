@@ -1,6 +1,7 @@
-import { useRef } from "react";
+import { useContext, useRef } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import Context from "../Context";
 import { mainsKey } from "../data";
 import HeaderLink from "./HeaderLink";
 
@@ -36,6 +37,7 @@ const Style = styled.header`
     justify-content: space-evenly;
     flex-direction: ${(props) => props.theme.header.menuLinks.flexDirection};
     align-items: center;
+
     .link-wrapper {
       display: inline-block;
     }
@@ -46,13 +48,19 @@ const Style = styled.header`
 `;
 
 export default function () {
+  const context = useContext(Context);
   const menuLinks = useRef();
   return (
     <Style className="show-menu">
       <Link to="/" className="prometheus icon">
         <img src="icons/prometheus-icon.png" height="100%" />
       </Link>
-      <nav ref={menuLinks} className="menu-links">
+      <nav
+        ref={menuLinks}
+        className={
+          "menu-links" + (context.mobile ? " frosted-glass-black" : "")
+        }
+      >
         {Object.values(mainsKey()).map((main, i) =>
           i > 0 ? <HeaderLink text={main.title} to={main.path} /> : null
         )}

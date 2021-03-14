@@ -26,6 +26,7 @@ export function Provider({ children }) {
       zIndex: 10,
       height: headerHeight + "px",
       menuLinks: {
+        fontSize: mobile ? "1.5rem" : "1.25rem",
         position: mobile ? "absolute" : "static",
         display: mobile ? "none" : "flex",
         flexDirection: mobile ? "column" : "row",
