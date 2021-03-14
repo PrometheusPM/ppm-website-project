@@ -1,15 +1,13 @@
 import styled from "styled-components";
 import Email from "../common/Email";
-import Heading from "../common/Heading";
 
 const Style = styled.footer`
   position: relative;
-
+  top: ${(props) => props.theme.header.height};
   display: flex;
   flex-direction: ${(props) => props.theme.footer.flexDirection};
   justify-content: space-evenly;
   z-index: ${(props) => props.theme.footer.zIndex};
-
   background-color: darkgrey;
   box-shadow: 0 0 8px black;
   .footer-email {

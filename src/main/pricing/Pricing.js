@@ -9,13 +9,15 @@ const Style = styled(Main)`
 
 export default function ({ backgroundImg }) {
   return (
-    <FlexGrid
-      title="Pricing"
-      items={pricingModules().map((pricing) => (
-        <InfoBox heading={pricing.title} text={pricing.text} />
-      ))}
-      cols={3}
-      backgroundImage={backgroundImg}
-    />
+    <Style>
+      <FlexGrid
+        title="Pricing"
+        items={pricingModules().map((pricing) => (
+          <InfoBox heading={pricing.title} text={pricing.text} />
+        ))}
+        cols={3}
+        backgroundImage={backgroundImg}
+      />
+    </Style>
   );
 }

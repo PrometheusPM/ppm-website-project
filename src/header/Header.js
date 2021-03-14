@@ -5,7 +5,9 @@ import { mainsKey } from "../data";
 import HeaderLink from "./HeaderLink";
 
 const Style = styled.header`
-  position: sticky;
+  box-sizing: border-box;
+  position: fixed;
+  width: 100%;
   z-index: ${(props) => props.theme.header.zIndex};
   top: 0;
   height: ${(props) => props.theme.header.height};

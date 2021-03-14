@@ -9,6 +9,7 @@ import Title from "../../common/Title";
 
 const Style = styled(Main)`
   position: relative;
+  background-size: cover;
   .service-heading {
     position: absolute;
     top: 0;
@@ -29,7 +30,6 @@ export default function ({ backgroundImg }) {
       ref={ref}
       style={{
         backgroundImage: `url(${backgroundImg})`,
-        backgroundSize: "100% auto",
       }}
     >
       <Nav />
