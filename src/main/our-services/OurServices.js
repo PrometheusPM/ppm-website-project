@@ -9,7 +9,6 @@ import Title from "../../common/Title";
 
 const Style = styled(Main)`
   position: relative;
-
   .service-heading {
     position: absolute;
     top: 0;
@@ -17,7 +16,7 @@ const Style = styled(Main)`
   }
 `;
 
-export default function () {
+export default function ({ backgroundImg }) {
   const context = useContext(Context);
   const ref = useRef();
   document.addEventListener("scroll", function (e) {
@@ -26,10 +25,16 @@ export default function () {
       Object.values(ref.current.children).forEach((service) => null);
   });
   return (
-    <Style ref={ref}>
+    <Style
+      ref={ref}
+      style={{
+        backgroundImage: `url(${backgroundImg})`,
+        backgroundSize: "100% auto",
+      }}
+    >
       <Nav />
-      {Object.values(servicesKey()).map((service) => {
-        return <Service {...service} />;
+      {Object.values(servicesKey()).map((service, i) => {
+        return <Service {...service} flip={i % 2 === 0} />;
       })}
       <div className="service-heading">
         <Title title="Our Services" />

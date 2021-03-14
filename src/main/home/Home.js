@@ -9,11 +9,11 @@ const Style = styled(Main)``;
 export default function () {
   return (
     <Style>
-      {homeSections().map((item, i) => {
+      {homeSections().map((homeSection, i) => {
         const Component = sectionComponents[i];
         return (
           <>
-            <Frame>
+            <Frame backgroundImage={homeSection.backgroundImage}>
               <Component />
             </Frame>
             {i === homeSections().length - 1 ? null : (

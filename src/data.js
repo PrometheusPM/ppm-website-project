@@ -1,6 +1,6 @@
 const iconDirectory = "icons/";
 const backgroundImageDirectory = "background-images/";
-const fileExtenstion = ".jpg";
+const fileExtenstion = "-2048.jpg";
 const iconExtension = ".png";
 function createId(title) {
   return title.toLowerCase().replaceAll(" ", "-");
@@ -26,7 +26,7 @@ export function mainsKey() {
       id,
       path: "/" + id,
       title,
-      backgroundImg: createImgSrc(backgroundImageDirectory, id),
+      backgroundImg: "background-images/" + id + "-2048.jpg",
     };
   });
   return key;
@@ -214,7 +214,16 @@ export function homeSections() {
   ];
   return items.map((item) => {
     const id = createId(item.title);
-    return { ...item, id };
+
+    return {
+      ...item,
+      id,
+      backgroundImage: createImgSrc(
+        backgroundImageDirectory,
+        id,
+        fileExtenstion
+      ),
+    };
   });
 }
 

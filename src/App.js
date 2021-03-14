@@ -21,7 +21,7 @@ function App() {
         <Switch>
           {Object.values(mainsKey()).map((main, i) => {
             const Component = mainComponents[i];
-            return <Route path={main.path}>{<Component />}</Route>;
+            return <Route path={main.path}>{<Component {...main} />}</Route>;
           })}
           <Route path="/">
             <Redirect to={mainsKey().home.path} />

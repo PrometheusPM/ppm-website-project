@@ -5,9 +5,12 @@ import Context from "../../Context";
 const Style = styled.article`
   position: relative;
   height: ${(props) => props.theme.main.height};
-
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
   .corner {
     position: absolute;
+    z-index: 4;
     height: 5%;
     width: 5%;
   }
@@ -26,7 +29,7 @@ const Style = styled.article`
 `;
 const SCROLL_MULTIPLIER = 1;
 const PERCENTAGE_MIN = 10;
-export default function ({ children }) {
+export default function ({ children, backgroundImage }) {
   const context = useContext(Context);
   const ref = useRef();
   document.addEventListener("scroll", function (e) {
@@ -52,7 +55,7 @@ export default function ({ children }) {
     }
   });
   return (
-    <Style ref={ref}>
+    <Style ref={ref} style={{ backgroundImage: `url(${backgroundImage})` }}>
       <div className="translucent-grey corner top left tl" />
       <div className="translucent-grey corner top right tr" />
       <div className="translucent-grey corner bottom right br" />

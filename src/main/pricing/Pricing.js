@@ -7,16 +7,15 @@ const Style = styled(Main)`
   min-height: ${(props) => props.theme.main.height};
 `;
 
-export default function () {
+export default function ({ backgroundImg }) {
   return (
-    <Style>
-      <FlexGrid
-        title="Pricing"
-        items={pricingModules().map((pricing) => (
-          <InfoBox heading={pricing.title} text={pricing.text} />
-        ))}
-        cols={3}
-      />
-    </Style>
+    <FlexGrid
+      title="Pricing"
+      items={pricingModules().map((pricing) => (
+        <InfoBox heading={pricing.title} text={pricing.text} />
+      ))}
+      cols={3}
+      backgroundImage={backgroundImg}
+    />
   );
 }

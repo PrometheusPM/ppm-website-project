@@ -1,21 +1,35 @@
+import { useContext } from "react";
 import styled from "styled-components";
 import Title from "../common/Title";
+import Context from "../Context";
 
 const Style = styled.article`
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  background-color: yellow;
+  min-height: ${(props) => props.theme.main.height};
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   .row {
-    background-color: blueviolet;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
   }
 `;
 
-export default function ({ title, padding = 0, item, items, cols = 4 }) {
+export default function ({
+  title,
+  padding = 0,
+  item,
+  items,
+  cols = 4,
+  mobileCols = 1,
+  backgroundImage,
+}) {
+  const context = useContext(Context);
+  cols = context.mobile ? mobileCols : cols;
   const rows = [[]];
   var counter = 0;
   if (items) {
@@ -29,7 +43,7 @@ export default function ({ title, padding = 0, item, items, cols = 4 }) {
     });
   }
   return (
-    <Style>
+    <Style style={{ backgroundImage: `url(${backgroundImage})` }}>
       {title ? <Title title={title} padding={padding} /> : null}
       {items ? (
         rows.map((row) => (

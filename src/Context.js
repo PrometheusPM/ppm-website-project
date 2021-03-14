@@ -20,9 +20,20 @@ export function Provider({ children }) {
       serviceNavWidth: serviceNavWidth + "px",
       serviceNavZIndex: 7,
     },
+    common: {
+      infoIconBox: {
+        order: mobile ? 2 : 0,
+        flexDirection: mobile ? "column" : "row",
+        iconWidth: mobile ? "50%" : "100%",
+      },
+      iconText: {
+        iconWidth: mobile ? "50%" : "50%",
+        fontSize: mobile ? ".5rem" : "1rem",
+      },
+    },
   };
   return (
-    <Context.Provider value={{ theme, windowSize, mainHeight }}>
+    <Context.Provider value={{ theme, windowSize, mobile, mainHeight }}>
       {children}
     </Context.Provider>
   );

@@ -1,12 +1,14 @@
 import FlexGrid from "../../../common/FlexGrid";
-import Title from "../../../common/Title";
+import Heading from "../../../common/Heading";
 import { securitySystems } from "../../../data";
 export default function () {
   return (
     <>
       <FlexGrid
         title="Safety and Security"
-        items={Object.values(securitySystems()).map((system) => system.title)}
+        items={Object.values(securitySystems()).map((system) => (
+          <Heading heading={system.title} />
+        ))}
       />
     </>
   );

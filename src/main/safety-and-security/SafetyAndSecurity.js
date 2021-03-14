@@ -8,15 +8,14 @@ const Style = styled(Main)`
   height: ${(props) => props.theme.main.height};
 `;
 
-export default function () {
+export default function ({ backgroundImg }) {
   return (
-    <Style>
-      <FlexGrid
-        title="Safety and Security"
-        items={securitySystems().map((system) => (
-          <InfoBox heading={system.title} text={system.text} />
-        ))}
-      />
-    </Style>
+    <FlexGrid
+      title="Safety and Security"
+      items={securitySystems().map((system) => (
+        <InfoBox heading={system.title} text={system.text} />
+      ))}
+      backgroundImage={backgroundImg}
+    />
   );
 }

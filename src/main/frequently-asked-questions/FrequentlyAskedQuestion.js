@@ -2,35 +2,34 @@ import styled from "styled-components";
 
 const Style = styled.div`
   padding: 2rem;
-  background-color: firebrick;
   :hover {
     .answer {
-      height: 100%;
-      padding-top: 1rem;
+      height: 128px;
+      padding: 0.5rem;
+    }
+    .question {
+      padding: 0.5rem;
     }
   }
   .question {
-    background-color: yellowgreen;
+    padding: 2rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+    transition: padding 0.25s ease-in-out;
   }
   .answer {
     height: 0;
     overflow-y: hidden;
-    background-color: lightblue;
+    color: whitesmoke;
+    transition: height 0.25s ease-in-out, padding 0.25s ease-in-out;
   }
 `;
-const Question = styled.div`
-  font-weight: bold;
-  padding-bottom: 0.25rem;
-`;
-const Answer = styled.div`
-  height: 0;
-  transition: height 0.25s ease-in-out;
-`;
+
 export default function ({ question, answer }) {
   return (
     <Style>
-      <div className="question">{question}</div>
-      <div className="answer">{answer}</div>
+      <div className="question frosted-glass darkgrey-heading">{question}</div>
+      <div className="answer frosted-glass-black">{answer}</div>
     </Style>
   );
 }

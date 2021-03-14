@@ -8,13 +8,12 @@ const Style = styled.section`
   width: ${(props) => props.theme.ourServices.serviceWidth};
   margin-left: ${(props) => props.theme.ourServices.serviceNavWidth};
   padding-top: ${(props) => props.theme.header.height};
-  background-color: lightblue;
-  :nth-child(odd) {
-    background-color: darkblue;
+  .service {
+    width: 90%;
   }
 `;
 
-export default function ({ id, title, blurb, icon }) {
+export default function ({ id, title, blurb, icon, flip }) {
   const ref = useRef();
   document.addEventListener("scroll", function (e) {
     const scrollTop = e.target.scrollingElement.scrollTop;
@@ -29,7 +28,9 @@ export default function ({ id, title, blurb, icon }) {
   return (
     <Style ref={ref} id={id}>
       <FlexGrid
-        item={<InfoIconBox heading={title} text={blurb} icon={icon} />}
+        item={
+          <InfoIconBox heading={title} text={blurb} icon={icon} flip={flip} />
+        }
       />
     </Style>
   );
