@@ -8,8 +8,10 @@ import Context from "../../Context";
 import Title from "../../common/Title";
 
 const Style = styled(Main)`
+  box-sizing: content-box;
   position: relative;
   background-size: cover;
+  padding-bottom: 128px;
   .service-heading {
     position: absolute;
     top: 0;
