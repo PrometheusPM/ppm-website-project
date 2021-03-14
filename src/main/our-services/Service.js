@@ -8,6 +8,7 @@ const Style = styled.section`
   width: ${(props) => props.theme.ourServices.serviceWidth};
   margin-left: ${(props) => props.theme.ourServices.serviceNavWidth};
   padding-top: ${(props) => props.theme.header.height};
+
   .service {
     width: 90%;
   }

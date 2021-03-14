@@ -13,11 +13,11 @@ function createImgSrc(directory, id, ext = fileExtenstion) {
 export function mainsKey() {
   const titles = [
     "Home",
-    "our-services",
-    "safety-and-security",
-    "frequently-asked-questions",
-    "pricing",
-    "contact-us",
+    "Our Services",
+    "Safety and Security",
+    "Frequently Asked-Questions",
+    "Pricing",
+    "Contact Us",
   ];
   const key = {};
   titles.forEach((title) => {

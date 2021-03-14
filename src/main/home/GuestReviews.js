@@ -9,8 +9,10 @@ const Style = styled.div`
     box-sizing: border-box;
     margin: 0 auto;
     font-weight: bold;
+    padding: 1rem;
   }
   .review {
+    font-size: ${(props) => props.theme.font.text.size};
     :before,
     :after {
       content: '"';
@@ -18,8 +20,8 @@ const Style = styled.div`
   }
   .inner {
     min-height: 50px;
-    display: grid;
-    grid-template-columns: 10% auto;
+    display: flex;
+    align-items: center;
     padding: 0.5rem;
     animation: anim 5s infinite;
     @keyframes anim {

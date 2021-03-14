@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { servicesKey } from "../../data";
+import GoldLink from "./ServiceLink";
 
 const Style = styled.section`
   position: fixed;
@@ -7,8 +8,15 @@ const Style = styled.section`
   left: -${(props) => props.theme.ourServices.serviceNavWidth};
   height: ${(props) => props.theme.main.height};
   width: ${(props) => props.theme.ourServices.serviceNavWidth};
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-image: url("background-images/service-nav-background.jpg");
+  background-size: 100% auto;
+  text-align: center;
   animation: slide-in 0.5s forwards;
+  box-shadow: 0px 4px 8px black;
   @keyframes slide-in {
     100% {
       left: 0;
@@ -21,7 +29,7 @@ export default function () {
     <Style>
       {Object.values(servicesKey()).map((service) => (
         <div>
-          <a href={service.href}>{service.title}</a>
+          <GoldLink text={service.title} href={service.href} />
         </div>
       ))}
     </Style>

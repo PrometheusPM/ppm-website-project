@@ -10,8 +10,8 @@ const Style = styled.div`
   }
   .inner {
     box-sizing: border-box;
-    padding: 2rem;
-    height: 100px;
+    padding: 1rem;
+    height: ${(props) => props.theme.common.heading.height};
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,6 +19,7 @@ const Style = styled.div`
   .title {
     font-size: 1.5rem;
     color: whitesmoke;
+    font-size: ${(props) => props.theme.font.heading.size};
   }
 `;
 

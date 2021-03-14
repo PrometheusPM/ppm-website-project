@@ -1,27 +1,28 @@
 import styled from "styled-components";
 
 const Style = styled.div`
-  padding: 2rem;
+  margin: 2rem;
   :hover {
     .answer {
-      height: 128px;
+      height: ${(props) => props.theme.faq.answerHeight};
       padding: 0.5rem;
     }
     .question {
-      padding: 0.5rem;
+      padding: 0rem;
     }
   }
   .question {
     padding: 2rem;
     font-weight: bold;
-    font-size: 1.25rem;
-    transition: padding 0.25s ease-in-out;
+    font-size: ${(props) => props.theme.font.heading.size};
+    transition: padding 0.125s ease-in-out;
   }
   .answer {
     height: 0;
+    font-size: ${(props) => props.theme.font.text.size};
     overflow-y: hidden;
     color: whitesmoke;
-    transition: height 0.25s ease-in-out, padding 0.25s ease-in-out;
+    transition: height 0.125s ease-in-out, padding 0.125s ease-in-out;
   }
 `;
 

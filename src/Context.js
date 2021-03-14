@@ -5,7 +5,7 @@ const Context = createContext();
 export function Provider({ children }) {
   const windowSize = useWindowSize();
   const mobile = windowSize.width < MOBILE_MAX_WIDTH; //width under MOBILE_MAX_WIDTH
-  const headerHeight = mobile ? 64 : 96;
+  const headerHeight = mobile ? 48 : 64;
   const mainHeight = windowSize.height - headerHeight;
   const scrollBarWidth =
     windowSize.width - document.documentElement.clientWidth;
@@ -13,13 +13,44 @@ export function Provider({ children }) {
   const serviceWidth = windowSize.width - serviceNavWidth - scrollBarWidth;
 
   const theme = {
+    font: {
+      title: { size: mobile ? "1.5rem" : "2rem" },
+      heading: {
+        size: mobile ? "1rem" : "1.25",
+        padding: mobile ? "1rem" : "3rem",
+      },
+      text: { size: mobile ? ".75rem" : "1rem" },
+    },
     main: { height: mainHeight + "px" },
-    header: { zIndex: 8, height: headerHeight + "px" },
+    header: {
+      zIndex: 10,
+      height: headerHeight + "px",
+      menuLinks: {
+        position: mobile ? "absolute" : "static",
+        display: mobile ? "none" : "flex",
+        flexDirection: mobile ? "column" : "row",
+        top: mobile ? headerHeight + "px" : 0,
+        height: mobile ? mainHeight + "px" : "100%",
+      },
+      menuButton: {
+        display: mobile ? "block" : "none",
+      },
+    },
+    footer: {
+      zIndex: 9,
+      height: "64px",
+      flexDirection: mobile ? "column" : "row",
+    },
     ourServices: {
       serviceWidth: serviceWidth + "px",
       serviceNavWidth: serviceNavWidth + "px",
       serviceNavZIndex: 7,
+      serviceLink: {
+        fontSize: mobile ? ".75rem" : "1rem",
+        padding: mobile ? ".25rem" : ".5rem",
+      },
     },
+    faq: { answerHeight: mobile ? "150px" : "128px" },
     common: {
       infoIconBox: {
         order: mobile ? 2 : 0,
@@ -30,6 +61,7 @@ export function Provider({ children }) {
         iconWidth: mobile ? "50%" : "50%",
         fontSize: mobile ? ".5rem" : "1rem",
       },
+      heading: { height: mobile ? "50px" : "100px" },
     },
   };
   return (

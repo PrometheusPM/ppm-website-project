@@ -3,22 +3,16 @@ import styled from "styled-components";
 const Style = styled.div`
   box-sizing: border-box;
   position: relative;
-  text-align: center;
-  .outer {
-    display: inline-block;
-    padding: 0.5rem;
-  }
-  .inner {
-    padding: 0.25rem;
-  }
-  .title {
+  display: inline-block;
+
+  .text {
     color: transparent;
-    font-size: ${(props) => props.theme.font.title.size};
+    font-size: 1.25rem;
   }
   .gold {
     position: relative;
     background-image: url("background-images/gold-gradient-text.jpg");
-    background-size: 100% 100%;
+    background-size: 100% 125%;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -30,15 +24,11 @@ const Style = styled.div`
   }
 `;
 
-export default function ({ title, padding = 0 }) {
+export default function ({ title, padding = 0, children }) {
   return (
     <Style style={{ padding: padding + "rem" }}>
-      <div className="outer frosted-glass">
-        <div className="inner frosted-glass-black">
-          <div className="title shadow">{title}</div>
-          <div className="title gold">{title}</div>
-        </div>
-      </div>
+      <div className="text shadow">{children}</div>
+      <div className="text gold">{children}</div>
     </Style>
   );
 }
