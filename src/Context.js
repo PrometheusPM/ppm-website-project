@@ -51,6 +51,7 @@ export function Provider({ children }) {
       },
     },
     faq: { answerHeight: mobile ? "150px" : "128px" },
+    contactUs: { emailWidth: mobile ? "80%" : "60%" },
     common: {
       infoIconBox: {
         order: mobile ? 2 : 0,

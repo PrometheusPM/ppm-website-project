@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Email from "../common/Email";
+import Heading from "../common/Heading";
 
 const Style = styled.footer`
   position: relative;
@@ -34,6 +35,7 @@ export default function () {
         <img src="icons/linkedin-icon.png" className="social-media-icon" />
       </div>
       <div className="footer-email">
+        <h3 className="whitesmoke-heading">Send us an email</h3>
         <Email cols={100} rows={5} />
       </div>
     </Style>

@@ -15,7 +15,7 @@ const Style = styled.header`
   padding: 0 1rem 0 1rem;
   background-image: url("background-images/header-background.jpg");
   background-size: 100% 100%;
-  box-shadow: 0 0 12px black;
+  box-shadow: 0 4px 8px black;
   .icon {
     height: 90%;
   }

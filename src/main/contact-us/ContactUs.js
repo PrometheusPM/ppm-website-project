@@ -6,7 +6,7 @@ import styled from "styled-components";
 const Style = styled(Main)`
   background-image: url("background-images/contact-us-2048.jpg");
   .email {
-    width: 80%;
+    width: ${(props) => props.theme.contactUs.emailWidth};
   }
 `;
 

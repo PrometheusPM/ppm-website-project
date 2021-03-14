@@ -3,8 +3,11 @@ import styled from "styled-components";
 import { guestReviews } from "../../data";
 
 const Style = styled.div`
+  position: relative;
+  z-index: 8;
   color: whitesmoke;
   text-shadow: 1px 1px 1px black;
+  box-shadow: 0 0 4px black;
   .guest {
     box-sizing: border-box;
     margin: 0 auto;
