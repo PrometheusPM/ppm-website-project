@@ -23,9 +23,6 @@ function App() {
             const Component = mainComponents[i];
             return <Route path={main.path}>{<Component {...main} />}</Route>;
           })}
-          <Route path="/">
-            <Redirect to={mainsKey().home.path} />
-          </Route>
         </Switch>
         <Footer />
       </Router>
