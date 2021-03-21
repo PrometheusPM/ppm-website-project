@@ -22,13 +22,16 @@ const Style = styled.section`
       left: 0;
     }
   }
+  .service-link {
+    width: calc(${(props) => props.theme.ourServices.serviceNavWidth}*.80);
+  }
 `;
 
 export default function () {
   return (
     <Style>
       {Object.values(servicesKey()).map((service) => (
-        <div>
+        <div className="service-link">
           <GoldLink text={service.title} href={service.href} />
         </div>
       ))}

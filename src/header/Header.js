@@ -52,7 +52,13 @@ export default function () {
   const menuLinks = useRef();
   return (
     <Style className="show-menu">
-      <Link to="/" className="prometheus icon">
+      <Link
+        to="/"
+        className="prometheus icon"
+        onClick={() => {
+          if (context.mobile) menuLinks.current.classList.toggle("show-menu");
+        }}
+      >
         <img src="icons/prometheus-icon.png" height="100%" />
       </Link>
       <nav
@@ -62,7 +68,17 @@ export default function () {
         }
       >
         {Object.values(mainsKey()).map((main, i) =>
-          i > 0 ? <HeaderLink text={main.title} to={main.path} /> : null
+          i > 0 ? (
+            <HeaderLink
+              text={context.mobile ? main.mobileTitle : main.title}
+              to={main.path}
+              onClick={() =>
+                context.mobile
+                  ? menuLinks.current.classList.toggle("show-menu")
+                  : null
+              }
+            />
+          ) : null
         )}
       </nav>
       <img

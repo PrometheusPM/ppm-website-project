@@ -64,9 +64,9 @@ const Style = styled.div`
   }
 `;
 
-export default function ({ text, to }) {
+export default function ({ text, to, onClick }) {
   return (
-    <Style>
+    <Style onClick={onClick}>
       <Link to={to}>
         <div className="non-text outlines ">
           <div className="tl outline" />

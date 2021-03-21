@@ -33,3 +33,23 @@ function App() {
   );
 }
 export default App;
+
+/*
+ * -same texture in footer ✓
+ * -pricing and safety, same as faq (mobile) ✓
+ * -fix text in pricing ✓
+ * -footer like yourkey, social media ✓
+ * -swap pricing icon
+ * -remove pricing ✓
+ * -fix "faq" in menu on mobile ✓
+ * -fix listing and creation box in nav on services ✓
+ * -swap main logo ✓
+ *
+ * -add landing page blurbs
+ * -add site intro blurb
+ *
+ * -search engine summary
+ * -website link preview
+ *
+ * -close mobile menu on nav click ✓
+ */
