@@ -39,7 +39,7 @@ export default App;
  * -pricing and safety, same as faq (mobile) ✓
  * -fix text in pricing ✓
  * -footer like yourkey, social media ✓
- * -swap pricing icon
+ * -swap pricing icon ✓
  * -remove pricing ✓
  * -fix "faq" in menu on mobile ✓
  * -fix listing and creation box in nav on services ✓
