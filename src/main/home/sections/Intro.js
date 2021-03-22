@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import FlexGrid from "../../../common/FlexGrid";
 import GoldText from "../../../common/GoldText";
+import InfoBox from "../../../common/InfoBox";
 
 const Style = styled.div`
   opacity: 0;
@@ -28,13 +29,7 @@ const Style = styled.div`
 export default function () {
   return (
     <Style>
-      <FlexGrid
-        item={
-          <div className="frosted-glass">
-            <div className="test" />
-          </div>
-        }
-      />
+      <FlexGrid item={<InfoBox text="dsfsdfds" />} />
     </Style>
   );
 }
