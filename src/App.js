@@ -45,8 +45,8 @@ export default App;
  * -fix listing and creation box in nav on services ✓
  * -swap main logo ✓
  *
- * -add landing page blurbs
- * -add site intro blurb
+ * -add landing page blurbs ✓
+ * -add site intro blurb ✓
  *
  * -search engine summary
  * -website link preview ✓

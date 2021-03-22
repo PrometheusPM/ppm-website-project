@@ -1,35 +1,37 @@
+import { useContext } from "react";
 import styled from "styled-components";
 import FlexGrid from "../../../common/FlexGrid";
 import GoldText from "../../../common/GoldText";
-import InfoBox from "../../../common/InfoBox";
+import Context from "../../../Context";
 
 const Style = styled.div`
-  opacity: 0;
-  animation: fade-in 1s forwards;
   height: inherit;
-  @keyframes fade-in {
-    100% {
-      opacity: 1;
-    }
-  }
-  .background {
-    padding: 1rem;
-    width: 50%;
-    font-size: 2rem;
-  }
-  .test {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100px;
-    width: 100px;
+
+  .intro-background {
+    width: 60%;
+    font-size: ${(props) => props.theme.home.introFontSize};
+    padding: 1.5rem;
   }
 `;
 
 export default function () {
+  const fontSize = useContext(Context).theme.home.introFontSize;
   return (
     <Style>
-      <FlexGrid item={<InfoBox text="dsfsdfds" />} />
+      <FlexGrid
+        item={
+          <div className="intro-background frosted-glass-black">
+            {[
+              "Prometheus is Calgary's premier Airbnb and short-term ",
+              "rental management company. Let our team of experienced,",
+              "professional managers elevate your rental property to",
+              "its highest and best use and maximize your return on investment.",
+            ].map((line) => (
+              <GoldText fontSize={fontSize}>{line}</GoldText>
+            ))}
+          </div>
+        }
+      />
     </Style>
   );
 }

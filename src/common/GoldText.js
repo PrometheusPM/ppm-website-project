@@ -23,9 +23,9 @@ const Style = styled.div`
   }
 `;
 
-export default function ({ title, padding = 0, rem = 1.25, children }) {
+export default function ({ fontSize = "1.25rem", children }) {
   return (
-    <Style style={{ padding: padding + "rem", fontSize: rem + "rem" }}>
+    <Style style={{ fontSize: fontSize }}>
       <div className="text shadow">{children}</div>
       <div className="text gold">{children}</div>
     </Style>

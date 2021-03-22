@@ -42,6 +42,9 @@ export function Provider({ children }) {
       height: "64px",
       flexDirection: mobile ? "column" : "row",
     },
+    home: {
+      introFontSize: mobile ? "1rem" : "1.5rem",
+    },
     ourServices: {
       serviceWidth: serviceWidth + "px",
       serviceNavWidth: serviceNavWidth + "px",
