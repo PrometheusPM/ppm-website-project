@@ -6,6 +6,7 @@ import { securitySystems } from "../../../data";
 const Style = styled.div`
   .whitesmoke-heading {
     padding: 2rem;
+    width: 100%;
   }
 `;
 

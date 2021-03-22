@@ -8,9 +8,10 @@ const Style = styled.div`
   height: inherit;
 
   .intro-background {
-    width: 60%;
+    text-align: center;
+    width: 80%;
     font-size: ${(props) => props.theme.home.introFontSize};
-    padding: 1.5rem;
+    padding: 3rem;
   }
 `;
 
