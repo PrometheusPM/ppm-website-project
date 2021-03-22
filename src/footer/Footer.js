@@ -10,20 +10,22 @@ const Style = styled.footer`
   justify-content: space-evenly;
   z-index: ${(props) => props.theme.footer.zIndex};
   background-image: url("background-images/header-background.jpg");
-  background-size: 100% 100%;
+  background-size: 100% 150%;
   box-shadow: 0 0 8px black;
   .contact-info {
     text-align: center;
     max-width: 50%;
     .social-media {
-      width: 100%;
       display: flex;
       justify-content: space-evenly;
       align-items: center;
       padding: 1rem;
       .social-media-icon {
-        width: 20%;
+        width: 32px;
       }
+    }
+    .non-social-media {
+      padding: 1rem;
     }
   }
   .quick-links {
@@ -53,16 +55,16 @@ export default function () {
           <img src="icons/insta-icon.png" className="social-media-icon" />
           <img src="icons/linkedin-icon.png" className="social-media-icon" />
         </div>
-        <div className="whitesmoke-heading">
+        <div className="whitesmoke-heading non-social-media">
           Email:
           <a
             href="mailto:prometheusPPM@outlook.com"
-            className="whitesmoke-heading"
+            className="whitesmoke-heading "
           >
             prometheusPPM@outlook.com
           </a>
         </div>
-        <div className="whitesmoke-heading">
+        <div className="whitesmoke-heading non-social-media">
           Phone:
           <a href="tel:0000000000">(XXX)XXX-XXXX</a>
         </div>

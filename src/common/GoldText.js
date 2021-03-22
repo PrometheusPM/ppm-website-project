@@ -7,7 +7,6 @@ const Style = styled.div`
 
   .text {
     color: transparent;
-    font-size: 1.25rem;
   }
   .gold {
     position: relative;
@@ -24,9 +23,9 @@ const Style = styled.div`
   }
 `;
 
-export default function ({ title, padding = 0, children }) {
+export default function ({ title, padding = 0, rem = 1.25, children }) {
   return (
-    <Style style={{ padding: padding + "rem" }}>
+    <Style style={{ padding: padding + "rem", fontSize: rem + "rem" }}>
       <div className="text shadow">{children}</div>
       <div className="text gold">{children}</div>
     </Style>

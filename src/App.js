@@ -49,7 +49,7 @@ export default App;
  * -add site intro blurb
  *
  * -search engine summary
- * -website link preview
+ * -website link preview ✓
  *
  * -close mobile menu on nav click ✓
  */

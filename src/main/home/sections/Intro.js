@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import FlexGrid from "../../../common/FlexGrid";
+import GoldText from "../../../common/GoldText";
 
 const Style = styled.div`
   opacity: 0;
@@ -10,12 +11,30 @@ const Style = styled.div`
       opacity: 1;
     }
   }
+  .background {
+    padding: 1rem;
+    width: 50%;
+    font-size: 2rem;
+  }
+  .test {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100px;
+  }
 `;
 
 export default function () {
   return (
     <Style>
-      <FlexGrid />
+      <FlexGrid
+        item={
+          <div className="frosted-glass">
+            <div className="test" />
+          </div>
+        }
+      />
     </Style>
   );
 }
