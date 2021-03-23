@@ -41,6 +41,7 @@ export function Provider({ children }) {
       zIndex: 9,
       height: "64px",
       flexDirection: mobile ? "column" : "row",
+      logoWidth: mobile ? "100%" : "30%",
     },
     home: {
       introFontSize: mobile ? "1rem" : "1.5rem",

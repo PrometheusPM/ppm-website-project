@@ -8,10 +8,12 @@ const Style = styled.footer`
   display: flex;
   flex-direction: ${(props) => props.theme.footer.flexDirection};
   justify-content: space-evenly;
+  align-items: center;
   z-index: ${(props) => props.theme.footer.zIndex};
   background-image: url("background-images/header-background.jpg");
   background-size: 100% 150%;
   box-shadow: 0 0 8px black;
+
   .contact-info {
     text-align: center;
     max-width: 50%;
@@ -35,11 +37,18 @@ const Style = styled.footer`
       text-decoration: none;
     }
   }
+  .footer-logo {
+    padding: 1rem;
+    width: ${(props) => props.theme.footer.logoWidth};
+  }
 `;
 //icons and email
 export default function () {
   return (
     <Style>
+      <div className="footer-logo">
+        <img src="icons/footer-logo.png" width="100%" />
+      </div>
       <div className="quick-links ">
         {Object.values(mainsKey()).map((main, i) =>
           i > 0 ? (
