@@ -88,14 +88,14 @@ export function servicesKey() {
 export function securitySystems() {
   const items = [
     {
-      title: "Smart Home Monitoring",
-      text:
-        "Utilizing smart home monitoring systems allows our management team to have real time awareness of activities inside our units. We can monitor motion and decibel levels, as well as heat and humidity inside your Airbnb at all times, providing numerous layers of security for your short-term rental ",
-    },
-    {
       title: "Smart locks",
       text:
         "Prometheus utilizes smart-locks in all units. All comings and goings can be monitored by our management team. One time, time sensitive codes are generated for guests to use during their stay, ensuring security of the unit.",
+    },
+    {
+      title: "Smart Home Monitoring",
+      text:
+        "Utilizing smart home monitoring systems allows our management team to have real time awareness of activities inside our units. We can monitor motion and decibel levels, as well as heat and humidity inside your Airbnb at all times, providing numerous layers of security for your short-term rental ",
     },
     {
       title: "Active Management",
@@ -227,7 +227,6 @@ export function homeSections() {
     };
   });
 }
-
 export function guestReviews() {
   const guestReviews = [
     {

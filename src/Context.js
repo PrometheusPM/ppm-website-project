@@ -46,6 +46,9 @@ export function Provider({ children }) {
     home: {
       introFontSize: mobile ? "1rem" : "1.5rem",
     },
+    safetyAndSecurity: {
+      width: mobile ? "90%" : "60%",
+    },
     ourServices: {
       serviceWidth: serviceWidth + "px",
       serviceNavWidth: serviceNavWidth + "px",

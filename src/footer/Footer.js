@@ -74,10 +74,6 @@ export default function () {
             PrometheusPPM@outlook.com
           </a>
         </div>
-        <div className="whitesmoke-heading non-social-media">
-          Phone:
-          <a href="tel:0000000000"> (XXX)XXX-XXXX</a>
-        </div>
       </div>
     </Style>
   );

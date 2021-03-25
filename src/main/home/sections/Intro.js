@@ -21,15 +21,11 @@ export default function () {
     <Style>
       <FlexGrid
         item={
-          <div className="intro-background frosted-glass-black">
-            {[
-              "Prometheus is Calgary's premier Airbnb and short-term ",
-              "rental management company. Let our team of experienced,",
-              "professional managers elevate your rental property to",
-              "its highest and best use and maximize your return on investment.",
-            ].map((line) => (
-              <GoldText fontSize={fontSize}>{line}</GoldText>
-            ))}
+          <div className="intro-background frosted-glass-black whitesmoke-heading">
+            Prometheus is Calgary's premier Airbnb and short-term rental
+            management company. Let our team of experienced professional
+            managers elevate your rental property to its highest and best use
+            and maximize your return on investment.
           </div>
         }
       />

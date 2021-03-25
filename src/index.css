@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caladea:ital,wght@1,700&display=swap");
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  font-family: "Lora", serif;
+  font-family: "Caladea", serif;
 }
 
 body {
