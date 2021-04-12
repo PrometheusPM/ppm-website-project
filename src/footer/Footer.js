@@ -16,14 +16,18 @@ const Style = styled.footer`
 
   .contact-info {
     text-align: center;
-    max-width: 50%;
+    max-width: 100%;
     .social-media {
       display: flex;
       justify-content: space-evenly;
       align-items: center;
       padding: 1rem;
       .social-media-icon {
+        display: inline-block;
         width: 32px;
+        img {
+          width: 100%;
+        }
       }
     }
     .non-social-media {
@@ -60,9 +64,24 @@ export default function () {
       </div>
       <div className="contact-info">
         <div className="social-media whitesmoke-heading">
-          <img src="icons/fb-icon.png" className="social-media-icon" />
-          <img src="icons/insta-icon.png" className="social-media-icon" />
-          <img src="icons/linkedin-icon.png" className="social-media-icon" />
+          <a
+            href="https://www.facebook.com/Prometheus-Property-Management-112117210975183"
+            className="social-media-icon"
+          >
+            <img src="icons/fb-icon.png" />
+          </a>
+          <a
+            href="https://www.instagram.com/prometheus_ppm/"
+            className="social-media-icon"
+          >
+            <img src="icons/insta-icon.png" className="social-media-icon" />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/72637985/admin/"
+            className="social-media-icon"
+          >
+            <img src="icons/linkedin-icon.png" className="social-media-icon" />
+          </a>
         </div>
         <div className="whitesmoke-heading non-social-media">
           Email:

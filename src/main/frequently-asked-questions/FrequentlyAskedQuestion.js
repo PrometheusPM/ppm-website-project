@@ -6,7 +6,7 @@ const Style = styled.div`
   margin: 2rem;
   :hover {
     .answer {
-      height: var(--height);
+      height: min-content;
       padding: 0.5rem;
     }
     .question {
