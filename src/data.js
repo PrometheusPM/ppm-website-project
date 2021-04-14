@@ -43,7 +43,7 @@ export function servicesKey() {
     {
       title: "Listing Creation and Optimization",
       blurb:
-        "Our team will list your unit across multiple booking platforms and the coordinate the calendar through a central channel manager to maximize booking revenue and minimize vacancy for your Airbnb.",
+        "Our team will list your unit across multiple booking platforms and coordinate the calendar through a central channel manager to maximize booking revenue and minimize vacancy for your Airbnb.",
     },
     {
       title: "Professional Cleaning",
