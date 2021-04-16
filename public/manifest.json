@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Prometheus",
+  "name": "Prometheus - Calgary's Premier Airbnb Management Service ",
+  "description": "Professional Experienced Hosting & Short-Term Rental Management",
   "icons": [
     {
       "src": "favicon.ico",
